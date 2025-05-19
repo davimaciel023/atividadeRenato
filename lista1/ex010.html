@@ -1,0 +1,16 @@
+<script>
+
+    // Calculadora de Desconto: Peca o preco e a porcentagem de des-
+    // conto. Calcule e mostre o valor do desconto e o preco final.
+
+    // Formula: Desconto = (preco×porcentagem)/100
+
+    let preco = Number(prompt("Digite o preço do produto: "))
+    let desconto = Number(prompt("Digite a porcentagem de desconto: "))
+
+    let des = (preco * desconto) / 100
+
+    let precoFinal = preco - des
+
+    alert(`O valor do produto é ${preco} reais, com desconto de ${desconto}% o valor final é ${precoFinal} reais`)
+</script>

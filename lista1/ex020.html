@@ -1,0 +1,18 @@
+<script>
+
+    // Compra de Camisetas: Camiseta custa R$ 35,00. Se comprar 3
+    // ou mais, ganha 10% de desconto. Mostre o valor total com ou sem
+    // desconto.
+
+    let camisas = Number(prompt("Quantas camisetas deseja comprar?"));
+    let preco = 35;
+    if (camisas >= 3) {
+        let desconto = (preco * camisas) * 0.10;
+        let total = (preco * camisas) - desconto;
+        alert(`O valor total da compra é de ${total.toFixed(2)}`);
+    } else {
+        let total = (preco * camisas);
+        alert(`O valor total da compra é de R$ ${total.toFixed(2)}`);
+    }
+
+</script>

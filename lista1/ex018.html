@@ -1,0 +1,12 @@
+<script>
+
+    // Calculadora de IMC: Pe ̧ca peso (kg) e altura (m). Calcule e mostre
+    // o IMC.
+    // Formula: IMC = peso / (altura×altura)
+
+    let imc = Number(prompt("Digite o seu peso em kg: "))
+    let altura = Number(prompt("Digite a sua altura em metros: "))
+    let imcTotal = imc / (altura * altura)
+
+    alert(`O seu IMC é ${imcTotal.toFixed(2)}`)
+</script>

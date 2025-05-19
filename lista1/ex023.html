@@ -1,0 +1,19 @@
+<script>
+
+//     Promocao de Lanchonete: Hamburguer R$12,00, batata R$7,00.
+//     Se comprar mais de 3 hamburgueres, ganha 10% de desconto.
+
+    let hamburguer = 12;
+    let batata = 7;
+    let quantidade = Number(prompt("Quantos hamburguers?"));
+    let quantidadeBatata = Number(prompt("Quantas batatas?"));
+    let total = (quantidade * hamburguer) + (quantidadeBatata * batata);
+    let desconto = 0;
+    if (quantidade >= 3) {
+        desconto = total * 0.1;
+    }
+    alert(`O total é de R$ ${total.toFixed(2)}`);
+    alert(`O desconto é de R$ ${desconto.toFixed(2)}`);
+    alert(`O total com desconto é de R$ ${total - desconto.toFixed(2)}`);
+
+</script>

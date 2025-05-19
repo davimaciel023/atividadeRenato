@@ -1,0 +1,15 @@
+<script>
+
+    // Supermercado - Desconto Progressivo: Se a compra for acima de
+    // R$200,00, ganha 5% de desconto.
+    // Formula: Final = total − (total × 0, 05)
+
+    let valorCompra = Number(prompt("Digite o valor total da compra: "))
+    if(valorCompra >= 200) {
+        let desconto = 0.05
+        let valorTotal = valorCompra - (valorCompra * desconto)
+        alert(`Você tem 5% de desconto, valor total da compra: R$${valorTotal} reais`)
+    } else {
+        alert(`O valor total da compra é R$${valorCompra} reais`)
+    }
+</script>

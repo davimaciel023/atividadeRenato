@@ -1,0 +1,16 @@
+<script>
+
+    // Conta de Agua:  ́ Tarifa basica de R$30,00 ate 10m3. Cada m3 extra
+    // custa R$3,50. Peca consumo e calcule.
+    // Se consumo ≤ 10, total = 30. Caso contrario: 30+(consumo−10)×3, 5
+
+    let agua = Number(prompt("Digite o consumo da agua: "))
+    if (agua <= 10) {
+        let conta = 30
+        alert(`O valor total da tarifa de água é igual a ${conta}`)
+    } else {
+        let conta = 30 + (agua-10) * 3.5
+        alert(`O valor da Tarifa de agua é igual a ${conta}`)
+    }
+
+</script>

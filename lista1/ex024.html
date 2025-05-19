@@ -1,0 +1,12 @@
+<script>
+
+    // Aumento Salarial: Peca o salario e a porcentagem de aumento. Cal-
+    // cule o novo salario.
+    // Formula: Novo salario = salario + ((salario×aumento)/100)
+
+    let salario = Number(prompt("Qual o salario? "));
+    let aumento = Number(prompt("Qual a porcentagem de aumento?"));
+    let novoSalario = salario + ((salario * aumento) / 100);
+    alert(`O novo salario é de R$ ${novoSalario.toFixed(2)}`);
+
+</script>

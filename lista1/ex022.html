@@ -1,0 +1,13 @@
+<script>
+
+    // Pintura de Parede: Cada lata pinta 12m2. Peca altura e largura da
+    // parede e calcule quantas latas precisa.
+    // Exemplo: (altura×largura)/12 
+
+    let pintura = 12;
+    let altura = Number(prompt("Qual a altura da parede?"));
+    let largura = Number(prompt("Qual a largura da parede?"));
+    let area = (altura * largura) / pintura;
+    alert(`São necessárias ${area.toFixed(0)} latas de tinta`);
+
+</script>

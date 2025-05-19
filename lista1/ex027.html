@@ -1,0 +1,16 @@
+<script>
+    //  Aluguel de Carro: Aluguel custa R$90,00/dia + R$0,20/km. Peca
+    // dias e km rodados.
+    // Formula: Total = dias × 90 + km × 0, 2
+
+
+    let aluguel = 90
+    let km = 0.2
+    let dias = Number(prompt("Digite o total de dias que irá alugar: "))
+    let kmRodados = Number(prompt("Digite o total de km rodados: "))
+
+    let total = aluguel * dias + km * kmRodados
+
+    alert(`Você alugou por ${dias} dias, rodou ${kmRodados}km e o aluguel total do veiculo foi de R$${total} reais`)
+
+</script>

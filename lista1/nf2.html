@@ -1,0 +1,49 @@
+<script>
+    let nomeCliente = prompt("Digite o nome do cliente: ")
+    let itens = Number(prompt("Digite a quantidade de itens: "))
+    let preco = 0
+    let ntFiscal = []
+
+    for(let i = 0; i < itens; i++) {
+        let nomeProduto = prompt("Digite o nome do produto: ")
+        let quantidade = Number(prompt("Digite a quantidade desse item: "))
+        let precoProduto = Number(prompt("Qual o preço do produto: "))
+
+        preco += (quantidade * precoProduto)
+    
+        ntFiscal.push({
+            "Produto": nomeProduto,
+            "Quantidade": quantidade,
+            "Preço Unitário": precoProduto
+        })
+    }
+
+    let descontos = 0
+
+    if(preco >= 300) {
+        desconto = preco * 0.15
+        preco -= desconto
+    }
+
+    let impostos = preco * 0.10
+
+    let valorTotal = preco + impostos
+
+    let notaFiscal = `Loja Wolf Shop 
+    \nCNPJ: 12.345.678/0001-45 
+    \nENDEREÇO: Fazenda Curupati
+    \nCliente ${nomeCliente}
+    \nItens Comprados:`;
+    
+    for(let j = 0; j < ntFiscal.length; j++){
+        notaFiscal += `\n-${ntFiscal[j]["Produto"]} - ${ntFiscal[j]["Quantidade"]} unidades - R$${ntFiscal[j]["Preço Unitário"]} cada`;
+    }
+    
+    notaFiscal += `
+    \nValor Total da Compra: R$${preco.toFixed(2)} reais
+    \nDescontos (15%): R$${descontos.toFixed(2)} reais
+    \nImpostos (5%): R$${impostos.toFixed(2)} reais
+    \nTotal a pagar: R$${valorTotal.toFixed(2)} reais`;
+    
+    document.write(notaFiscal);
+</script>
