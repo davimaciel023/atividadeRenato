@@ -1,0 +1,19 @@
+<script>
+
+//     Analisador de Conjuntos Numericos
+//     Solicite que o usu ́ario digite 5 numeros diferentes. Em seguida, exiba qual
+//  ́   e o maior e o menor numero usando Math.max() e Math.min().
+
+    let lista = []
+
+    let i = 0
+    
+    while(i < 5) {
+        let numero = Number(prompt("Digite um número diferente: "))
+        lista.push(numero)
+
+        i++
+    }
+    alert(`O número maior é ${Math.max([lista])} \nO número menor é ${Math.min([lista])}`)
+
+</script>

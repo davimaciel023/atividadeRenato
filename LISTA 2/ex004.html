@@ -1,0 +1,23 @@
+<script>
+
+//     Elabore um programa que sorteie um n ́umero inteiro aleat ́orio entre 1 e
+// 100, usando Math.random() e Math.floor(). O programa deve pedir
+// para o usu ́ario tentar adivinhar o n ́umero sorteado, indicando se o palpite
+//  ́e maior ou menor que o n ́umero at ́e que acerte.
+
+    let sorteado = Math.floor(Math.random() * 100) + 1
+    let numero = 0
+
+    while(numero !== sorteado) {
+        numero = Number(prompt("Digite um número: "))
+
+        if(numero == sorteado) {
+            alert(`Parabens você acertou`)
+        } else if(numero > sorteado){
+            alert(`O número que você digitou é maior do que o número sorteado`)
+        } else if(numero < sorteado) {
+            alert(`O número que você digitou é menor do que o numero sorteado`)
+        }
+    }
+
+</script>
