@@ -1,0 +1,22 @@
+<script>
+
+    let trabLab = Number(prompt("Digite a nota do Trabalho de laboratório: "))
+    let avSemestral = Number(prompt("Digite a nota da Avaliação semestral: "))
+    let exameFinal = Number(prompt("Digite a nota do Exame final: "))
+
+    let media = ((trabLab*2) + (avSemestral*3) + (exameFinal*5)) / 10
+    console.log(media);
+
+    if(media >= 8 && media<=10) {
+        alert("A")
+    } else if(media >= 7 && media<=8) {
+        alert("B")
+    } else if(media >= 6 && media <= 7) {
+        alert("C")
+    } else if(media >= 5 && media <= 6){
+        alert("D")
+    } else if(media >= 0 && media <= 5){
+        alert("E")
+    }
+
+</script>
