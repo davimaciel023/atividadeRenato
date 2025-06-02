@@ -1,0 +1,15 @@
+<script>
+
+    let velMax = Number(prompt("Qual a velocidade máxima da avenida: ")).toFixed(0)
+    let velMot = Number(prompt("Qual a velocidade do motorista: ")).toFixed(0)
+
+    if(velMax < velMot) {
+        let multa = (velMot - velMax) * 5
+
+        alert(`O valor da multa é de ${multa} reais`)
+    } else {
+        alert("Não tem multa")
+    }
+
+
+</script>
