@@ -1,0 +1,36 @@
+<script>
+
+    let n1 = Number(prompt("Digite a primeira nota: "))
+    let n2 = Number(prompt("Digite a segunda nota: "))
+    let n3 = Number(prompt("Digite a terceira nota: "))
+
+    let media = (n1 + n2 + n3) / 3
+
+    media.toFixed(0)
+    
+    console.log(media);
+
+    if(media <= 3) {
+        alert(`Você foi Reprovado. sua média é ${media}`)
+
+    } else if (media > 3 && media < 7){
+        let mediaExame = 0
+        while(true) {
+            console.log(`Está dentro do WHILE ${mediaExame}`);
+            console.log(`Está dentro do WHILE ${media}`);
+            let soma = (mediaExame + media) /2
+
+            if(soma == 6){
+                alert(`Você está no exame, pois sua média é ${media}\n Para ser aprovado você precisa tirar ${mediaExame}`)
+                break
+            } else {
+                mediaExame ++
+                continue
+            }
+
+        }
+
+    } else if(media > 7) {
+        alert(`Você foi Aprovado. sua média é ${media.toFixed(0)}`)
+    }
+</script>
