@@ -1,0 +1,27 @@
+<script>
+
+//     Sistema de Compras com do...while
+// Implemente um programa que solicite ao usu ́ario o pre ̧co de produtos. O programa
+// deve continuar perguntando at ́e que o usu ́ario digite 0. Ao final, exiba:
+// • O total gasto.
+// • A quantidade de produtos comprados.
+// Utilize a estrutura do...while.
+
+let i = 0
+let gastos = 0
+let quantidadeProd = 0
+
+do {
+        let precoProd = Number(prompt("Digite o preço de produtos: "))
+        if(precoProd != 0) {
+            i = precoProd
+            gastos += precoProd
+            quantidadeProd ++
+        }
+        i = precoProd
+        
+    } while (i != 0){
+        alert(`O Valor gasto foi de ${gastos} \nQuantidade de produtos: ${quantidadeProd}`)
+    }
+
+</script>
