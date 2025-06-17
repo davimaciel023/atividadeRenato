@@ -1,0 +1,23 @@
+<script>
+
+// Contagem de Pares e  ́Impares
+// Pe ̧ca ao usu ́ario 6 n ́umeros inteiros. Ao final, exiba quantos s ̃ao pares e quantos s ̃ao
+//  ́ımpares. Utilize a estrutura for ou while.
+
+
+    let pares = 0
+    let impares = 0
+
+    for(let i = 0; i < 6; i++) {
+        let num = Number(prompt("Digite um número: "))
+
+        if(num % 2 == 0) {
+            pares ++
+        } else {
+            impares ++
+        }
+    }
+
+    alert(`Par: ${pares} \nImpares: ${impares}`)
+
+</script>
