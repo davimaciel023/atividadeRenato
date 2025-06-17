@@ -12,13 +12,13 @@ let gastos = 0
 let quantidadeProd = 0
 
 do {
-        let precoProd = Number(prompt("Digite o preço de produtos: "))
-        if(precoProd != 0) {
-            i = precoProd
-            gastos += precoProd
-            quantidadeProd ++
-        }
+    let precoProd = Number(prompt("Digite o preço de produtos: "))
+    if(precoProd != 0) {
         i = precoProd
+        gastos += precoProd
+        quantidadeProd ++
+    }
+    i = precoProd
         
     } while (i != 0){
         alert(`O Valor gasto foi de ${gastos} \nQuantidade de produtos: ${quantidadeProd}`)

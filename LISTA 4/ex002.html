@@ -1,0 +1,25 @@
+<script>
+
+//     An ́alise e Corre ̧c ̃ao de C ́odigo
+// Analise o c ́odigo abaixo:
+// let total = 0;
+// let preco = prompt("Digite o pre ̧co do produto (0 para encerrar):");
+// while (preco !== 0) {
+    // total += parseFloat(preco);
+    // preco = prompt("Digite o pr ́oximo pre ̧co (0 para encerrar):");
+// }
+// alert("Total gasto: R$ " + total.toFixed(2));
+
+// (a) Identifique o erro no c ́odigo e explique por que ele ocorre.
+    //O erro está em na condição do while (preco !== 0), esse condição sempre será verdadeira pois o como tem "!==" significa que o
+
+// (b) Corrija o c ́odigo para que funcione corretamente.
+
+    let total = 0;
+    let preco = prompt("Digite o pre ̧co do produto (0 para encerrar):");
+    while (preco != 0) {
+        total += parseFloat(preco);
+        preco = prompt("Digite o pr ́oximo pre ̧co (0 para encerrar):");
+    }
+    alert("Total gasto: R$ " + total.toFixed(2));
+</script>
