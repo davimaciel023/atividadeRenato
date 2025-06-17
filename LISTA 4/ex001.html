@@ -7,20 +7,19 @@
 // • A quantidade de produtos comprados.
 // Utilize a estrutura do...while.
 
-let i = 0
+let precoProd = 0
 let gastos = 0
 let quantidadeProd = 0
 
 do {
-    let precoProd = Number(prompt("Digite o preço de produtos: "))
+    precoProd = Number(prompt("Digite o preço de produtos: "))
     if(precoProd != 0) {
-        i = precoProd
         gastos += precoProd
         quantidadeProd ++
     }
     i = precoProd
         
-    } while (i != 0){
+    } while (precoProd != 0){
         alert(`O Valor gasto foi de ${gastos} \nQuantidade de produtos: ${quantidadeProd}`)
     }
 
