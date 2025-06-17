@@ -1,0 +1,20 @@
+<script>
+
+// Soma com Quantidade Definida
+// Pe ̧ca ao usu ́ario quantos produtos ele deseja registrar. Em seguida, utilizando a
+// estrutura for, pe ̧ca os pre ̧cos de cada produto, calcule o total e a m ́edia de pre ̧cos.
+
+    let registrarProd = Number(prompt("Quantos produtos quer registar ?"))
+    let total = 0
+    let media = 0
+
+    for(let i = 0; registrarProd > i; i ++) {
+        let precProd = Number(prompt("Preço do produto: "))
+        total += precProd
+    }
+
+    media = total / registrarProd
+
+    alert(`Total: ${total} \nMédia: ${media}`)
+
+</script>
