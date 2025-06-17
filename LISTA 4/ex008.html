@@ -1,0 +1,31 @@
+<script>
+
+// Contagem at ́e 50
+// Implemente um programa que exiba no console os n ́umeros de 1 a 50. Ao final,
+// informe quantos desses n ́umeros s ̃ao m ́ultiplos de 5. Utilize while.
+
+    let cont = 0
+    let numeros = ""
+    let multiplos = 0
+
+    while(true) {
+        if(cont < 50) {
+            cont ++
+            numeros += `${cont} \n`
+
+            if (cont % 5 == 0) {
+                multiplos ++
+                continue
+            } else {
+                continue
+            }
+
+        } else {
+            break
+        }
+    }
+    
+    console.log(numeros);
+    console.log(`Multiplos de 5: ${multiplos} números`)
+
+</script>
