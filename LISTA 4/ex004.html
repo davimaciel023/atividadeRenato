@@ -1,0 +1,17 @@
+<script>
+
+// Tabuada com for
+// Solicite ao usu ́ario um n ́umero entre 1 e 10 e exiba a tabuada desse n ́umero de 1 a
+// 10 utilizando a estrutura for.
+
+    let num = Number(prompt("Digite um número de 1 a 10: "))
+    let tabuada = ""
+
+    for(let i = 0; i < 10; i++){
+        let soma = (i+1) + num
+        tabuada += `${num} + ${i+1} = ${soma}\n`
+    }
+
+    alert(`Tabuada: \n${tabuada}`)
+
+</script>
