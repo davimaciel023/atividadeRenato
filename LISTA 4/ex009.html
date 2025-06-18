@@ -1,0 +1,23 @@
+<script>
+
+// Soma at ́e n ́umero negativo
+// Pe ̧ca ao usu ́ario que digite n ́umeros positivos. Continue aceitando valores at ́e que o
+// usu ́ario digite um n ́umero negativo. Ao final, exiba:
+// • A soma total.
+// • A quantidade de n ́umeros v ́alidos digitados.
+
+    let numValido = 0
+    let soma = 0
+
+    while(true) {
+        let num = Number(prompt("Digite um número: "))
+        if (num < 0) {
+            break
+        } else {
+            soma += num
+            numValido ++
+        }
+    }
+
+    alert(`Soma total: ${soma}  \nNúmeros validos: ${numValido}`)
+</script>
