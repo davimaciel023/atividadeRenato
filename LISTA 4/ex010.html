@@ -1,0 +1,28 @@
+<script>
+
+// Menu interativo com while
+// Crie um menu que funcione da seguinte forma:
+// 1 - Calcular quadrado de um n ́umero
+// 2 - Calcular raiz quadrada de um n ́umero
+// 3 - Sair
+
+// O programa deve repetir o menu at ́e que o usu ́ario escolha a op ̧c ̃ao 3. Utilize while
+// ou do...while.
+
+    while(true) {
+        let escolha = Number(prompt(`Escolha: \n1 - Calcular quadrado de um número \n2 - Calcular raiz quadrad de um número \n3 - Sair`))
+
+        if(escolha == "1"){
+            let num = Number(prompt("Digite um número: "))
+            alert(`O quadrado de ${num} é ${num * 2}`)
+        } else if (escolha == "2") {
+            let num = Number(prompt("Digite um número: "))
+            alert(`A raiz quadrada de ${num} é ${Math.sqrt(num)}`)
+        } else if(escolha == "3") {
+            break
+        }
+
+
+    }
+
+</script>
