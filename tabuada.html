@@ -2,11 +2,10 @@
 
     let tabuada = ''
 
-    for(let i = 0; i<10; i++) {
+    for(let i = 0; i<=10; i++) {
 
-        for(let j = 0; j<10; j++) {
-            let soma = (i + j) + 1
-            tabuada += `${i + 1} + ${j + 1} = ${soma + 1} \n`
+        for(let j = 0; j<=10; j++) {
+            tabuada += `${i} + ${j} = ${i + j} \n`
         }
         tabuada += `\n`
     }
