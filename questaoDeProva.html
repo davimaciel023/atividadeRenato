@@ -1,13 +1,17 @@
 <script>
 
     let num = Number(prompt("Digite um número: "))
+    let piramide = ''
 
-    for(let i = 0; i < num; i++) {
+    for(let i = 0; i <= num; i++) {
+        let linha = ""
         
-        for(let j = 0; j < num; j++) {
-
+        for(let j = num; j >= i; j--) {
+            linha += "*"
         }
-
+        piramide += `${linha} \n`
     }
+
+    alert(piramide)
 
 </script>
