@@ -3,12 +3,20 @@
     let num = Number(prompt("Digite um número: "))
     let piramide = ''
 
+    let metade = num / 2
     for(let i = 0; i <= num; i++) {
-        let linha = ""
-        
-        for(let j = num; j >= i; j--) {
-            linha += "*"
+        let linha = "" 
+
+        if(i < metade){
+            for(let j = 0; j < i; j++) {
+                linha += "*"
+            }
+        } else{
+            for(let j = 0; j > i; j--){
+                linha += "*"
+            }
         }
+        
         piramide += `${linha} \n`
     }
 
