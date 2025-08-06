@@ -1,0 +1,24 @@
+<script>
+
+    let numeros = [];
+
+    for (let i = 0; i < 5; i++) {
+        numeros[i] = parseInt(prompt("Digite um número:"));
+    }
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = i + 1; j < 5; j++) {
+            if (numeros[i] > numeros[j]) {
+                let temp = numeros[i];
+                numeros[i] = numeros[j];
+                numeros[j] = temp;
+            }
+        }
+    }
+
+    for (let i = 0; i < 5; i++) {
+        console.log(numeros[i]);
+    }
+
+
+</script>
