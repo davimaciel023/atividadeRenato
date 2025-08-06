@@ -1,0 +1,16 @@
+<script>
+
+    let numeros = [];
+    let menor;
+
+    for (let i = 0; i < 5; i++) {
+        numeros[i] = parseInt(prompt("Digite um número:"));
+        if (i === 0 || numeros[i] < menor) {
+            menor = numeros[i];
+    }
+    }
+
+    console.log("Menor número:", menor);
+
+
+</script>
