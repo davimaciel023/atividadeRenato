@@ -1,0 +1,16 @@
+<script>
+
+    let letras = ['A','B','C','D','E','F','G','H','I','J'];
+
+    for (let i = 0; i < 10; i++) {
+        let linha = letras[i];
+
+        if ((i + 1) % 3 === 0 || i === 9) {
+            console.log(linha);
+        } else {
+            process.stdout.write(linha + " ");
+        }
+    }
+
+
+</script>
