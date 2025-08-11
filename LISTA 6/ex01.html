@@ -1,0 +1,25 @@
+<script>
+
+    let modelos = []
+    let consumos = []
+
+    for (let i = 0; i < 5; i++) {
+        modelos[i] = prompt("Digite o modelo do carro " + (i + 1) + ":");
+        consumos[i] = parseFloat(prompt("Digite o consumo (km/L) do " + modelos[i] + ":"));
+    }
+
+    economico = 0
+
+    for(let i = 0; i<5; i++) {
+        if (consumos[i] <= consumos[economico]){
+            economico = i
+        }
+    }
+
+    console.log("Carro mais econômico:", modelos[economico], "com", consumos[economico], "km/L");
+
+    for(let i = 0; i < 5; i++) {
+        console.log(`O ${modelos[i]} consome ${consumos[i] * 1000}L`)
+    }
+
+</script>
