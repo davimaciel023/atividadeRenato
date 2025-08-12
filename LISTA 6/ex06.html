@@ -1,33 +1,33 @@
 <script>
 
-    let nomes = [];
-    let medias = [];
+    let nomes = []
+    let medias = []
 
     for (let i = 0; i < 7; i++) {
-        nomes[i] = prompt("Digite o nome do aluno " + (i + 1) + ":");
-        medias[i] = parseFloat(prompt("Digite a média final de " + nomes[i] + ":"));
+        nomes[i] = prompt("Digite o nome do aluno " + (i + 1) + ":")
+        medias[i] = parseFloat(prompt("Digite a média final de " + nomes[i] + ":"))
     }
 
-    let maiorMedia = medias[0];
-    let nomeMaior = nomes[0];
+    let maiorMedia = medias[0]
+    let nomeMaior = nomes[0]
 
     for (let i = 1; i < 7; i++) {
         if (medias[i] > maiorMedia) {
-            maiorMedia = medias[i];
-            nomeMaior = nomes[i];
+            maiorMedia = medias[i]
+            nomeMaior = nomes[i]
         }
     }
 
-    console.log("Aluno com maior média:", nomeMaior, " - Média:", maiorMedia);
+    console.log("Aluno com maior média:", nomeMaior, " - Média:", maiorMedia)
 
-    console.log("Alunos que precisarão fazer exame final:");
+    console.log("Alunos que precisarão fazer exame final:")
     for (let i = 0; i < 7; i++) {
         if (medias[i] < 7) {
-            let notaNecessaria = 10 - medias[i]; 
+            let notaNecessaria = 10 - medias[i] 
             if ((medias[i] + notaNecessaria) / 2 < 5) {
-                notaNecessaria = (5 * 2) - medias[i];
+                notaNecessaria = (5 * 2) - medias[i]
             }
-            console.log(nomes[i], "precisa tirar", notaNecessaria, "no exame final.");
+            console.log(nomes[i], "precisa tirar", notaNecessaria, "no exame final.")
         }
     }
 

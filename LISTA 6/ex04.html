@@ -1,47 +1,47 @@
 <script>
 
-    let codigos = [];
-    let estoques = [];
+    let codigos = []
+    let estoques = []
 
     for (let i = 0; i < 10; i++) {
-        codigos[i] = parseInt(prompt("Digite o CÓDIGO do produto " + (i + 1) + ":"));
-        estoques[i] = parseInt(prompt("Digite o ESTOQUE do produto de código " + codigos[i] + ":"));
+        codigos[i] = parseInt(prompt("Digite o CÓDIGO do produto " + (i + 1) + ":"))
+        estoques[i] = parseInt(prompt("Digite o ESTOQUE do produto de código " + codigos[i] + ":"))
     }
 
     while (true) {
-        let codCliente = parseInt(prompt("Digite o CÓDIGO do cliente (0 para encerrar):"));
+        let codCliente = parseInt(prompt("Digite o CÓDIGO do cliente (0 para encerrar):"))
         if (codCliente === 0) {
-            break;
+            break
         }
 
-        let codProduto = parseInt(prompt("Digite o CÓDIGO do produto desejado:"));
-        let qtd = parseInt(prompt("Digite a QUANTIDADE desejada:"));
+        let codProduto = parseInt(prompt("Digite o CÓDIGO do produto desejado:"))
+        let qtd = parseInt(prompt("Digite a QUANTIDADE desejada:"))
 
-        let pos = -1;
+        let pos = -1
         for (let i = 0; i < 10; i++) {
             if (codigos[i] === codProduto) {
-                pos = i;
-                break;
+                pos = i
+                break
             }
         }
 
         if (pos === -1) {
-            console.log("Código inexistente");
+            console.log("Código inexistente")
         } else {
             if (qtd <= estoques[pos]) {
-                estoques[pos] = estoques[pos] - qtd;
-                console.log("Pedido atendido. Obrigado e volte sempre.");
+                estoques[pos] = estoques[pos] - qtd
+                console.log("Pedido atendido. Obrigado e volte sempre.")
             } else {
-                console.log("Não temos estoque suficiente dessa mercadoria.");
+                console.log("Não temos estoque suficiente dessa mercadoria.")
 
             }
         }
     }
 
-    console.log("ESTOQUES ATUALIZADOS:");
-    
+    console.log("ESTOQUES ATUALIZADOS:")
+
     for (let i = 0; i < 10; i++) {
-        onsole.log("Código:", codigos[i], "- Estoque:", estoques[i]);
+        onsole.log("Código:", codigos[i], "- Estoque:", estoques[i])
     }
 
 
