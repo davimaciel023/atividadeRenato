@@ -1,0 +1,37 @@
+<script>
+
+    let nomes = []
+    let codigos = []
+    let precos = []
+
+    for (let i = 0; i < 10; i++) {
+        nomes[i] = prompt("Nome do produto " + (i + 1) + ":")
+        codigos[i] = parseInt(prompt("Código do produto " + nomes[i] + ":"))
+        precos[i] = parseFloat(prompt("Preço do produto " + nomes[i] + ":"))
+    }
+
+    console.log("Relatório de produtos com aumento:")
+    for (let i = 0; i < 10; i++) {
+        let codigoPar = (codigos[i] % 2 === 0)
+        let precoMaiorQueMil = (precos[i] > 1000)
+
+        if (codigoPar || precoMaiorQueMil) {
+            let novoPreco = precos[i]
+
+            if (codigoPar && precoMaiorQueMil) {
+                novoPreco = precos[i] + (precos[i] * 20 / 100)
+
+            } else if (codigoPar) {
+                novoPreco = precos[i] + (precos[i] * 15 / 100)
+
+            } else if (precoMaiorQueMil) {
+                novoPreco = precos[i] + (precos[i] * 10 / 100)
+                
+            }
+
+            console.log("Nome:", nomes[i], "- Código:", codigos[i], "- Preço antigo: R$", precos[i], "- Novo preço: R$", novoPreco)
+        }
+    }
+
+
+</script>
