@@ -1,0 +1,50 @@
+<script>
+
+    let vetor1 = []
+    let vetor2 = []
+
+    for (let i = 0; i < 10; i++) {
+        vetor1[i] = parseInt(prompt("Digite o número " + (i + 1) + " do primeiro vetor:"))
+    }
+
+    for (let i = 0; i < 5; i++) {
+        vetor2[i] = parseInt(prompt("Digite o número " + (i + 1) + " do segundo vetor:"))
+    }
+
+    console.log("Num:", vetor1.join(" "))
+    let posicoes1 = ""
+
+    for (let i = 1; i <= 10; i++) {
+        posicoes1 += i + " "
+    }
+    console.log(posicoes1)
+
+    console.log("Divis:", vetor2.join(" "))
+    
+    let posicoes2 = ""
+
+    for (let i = 1; i <= 5; i++) {
+        posicoes2 += i + " "
+    }
+    console.log(posicoes2)
+
+    for (let i = 0; i < 10; i++) {
+        let numero = vetor1[i]
+        let encontrouDivisor = false
+
+        console.log("Número", numero)
+
+        for (let j = 0; j < 5; j++) {
+            if (numero % vetor2[j] === 0) {
+                console.log("Divisível por", vetor2[j], "na posição", j + 1)
+                encontrouDivisor = true
+            }
+        }
+
+        if (!encontrouDivisor) {
+            console.log("Não possui divisores no segundo vetor")
+        }
+    }
+
+
+</script>
