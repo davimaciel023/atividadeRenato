@@ -1,0 +1,52 @@
+<script>
+
+    let nomes = []
+    let salarios = []
+    let tempos = []
+
+    for (let i = 0; i < 5; i++) {
+        nomes[i] = prompt("Digite o nome do funcionário " + (i + 1) + ":")
+        salarios[i] = parseFloat(prompt("Digite o salário de " + nomes[i] + ":"))
+        tempos[i] = parseInt(prompt("Digite o tempo de serviço (anos) de " + nomes[i] + ":"))
+    }
+
+    console.log("Funcionários que NÃO terão aumento:")
+
+    for (let i = 0; i < 5; i++) {
+        let direitoAumento = false
+
+        if (tempos[i] > 5 || salarios[i] < 800) {
+            direitoAumento = true
+        }
+
+        if (!direitoAumento) {
+            console.log(nomes[i])
+        }
+    }
+
+    console.log("Funcionários que terão aumento (nome e novo salário):")
+    
+    for (let i = 0; i < 5; i++) {
+        let novoSalario = salarios[i]
+        let direitoAumento = false
+
+        if (tempos[i] > 5 || salarios[i] < 800) {
+            direitoAumento = true
+
+            if (tempos[i] > 5 && salarios[i] < 800) {
+                novoSalario = salarios[i] + (salarios[i] * 35 / 100)
+
+            } else if (tempos[i] > 5) {
+                novoSalario = salarios[i] + (salarios[i] * 25 / 100)
+
+            } else if (salarios[i] < 800) {
+                novoSalario = salarios[i] + (salarios[i] * 15 / 100)
+
+            }
+
+            console.log(nomes[i], "- Novo salário: R$", novoSalario)
+        }
+    }
+
+
+</script>
