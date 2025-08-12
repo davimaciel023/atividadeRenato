@@ -1,0 +1,44 @@
+<script>
+
+    let nomes = [];
+    let vendas = [];
+    let percentuais = [];
+    let valoresReceber = [];
+    let totalVendas = 0;
+
+    for (let i = 0; i < 10; i++) {
+        nomes[i] = prompt("Digite o nome do vendedor " + (i + 1) + ":");
+        vendas[i] = parseFloat(prompt("Digite o total de vendas de " + nomes[i] + ":"));
+        percentuais[i] = parseFloat(prompt("Digite o percentual de comissão (%) de " + nomes[i] + ":"));
+
+        valoresReceber[i] = vendas[i] * (percentuais[i] / 100);
+        totalVendas = totalVendas + vendas[i];
+    }
+
+    let maior = valoresReceber[0];
+    let menor = valoresReceber[0];
+    let nomeMaior = nomes[0];
+    let nomeMenor = nomes[0];
+
+    for (let i = 1; i < 10; i++) {
+        if (valoresReceber[i] > maior) {
+            maior = valoresReceber[i];
+            nomeMaior = nomes[i];
+        }
+        if (valoresReceber[i] < menor) {
+            menor = valoresReceber[i];
+            nomeMenor = nomes[i];
+        }
+    }
+
+    console.log("Relatório de Comissões:");
+    for (let i = 0; i < 10; i++) {
+        console.log(nomes[i] + " - Comissão: R$ " + valoresReceber[i]);
+    }
+
+    console.log("Total de vendas de todos os vendedores: R$ " + totalVendas);
+    console.log("Maior valor a receber: " + nomeMaior + " - R$ " + maior);
+    console.log("Menor valor a receber: " + nomeMenor + " - R$ " + menor);
+
+    
+</script>
