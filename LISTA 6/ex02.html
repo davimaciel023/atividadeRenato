@@ -1,0 +1,39 @@
+<script>
+
+    let gabarito = [];
+    for (let i = 0; i < 8; i++) {
+        gabarito[i] = prompt("Digite a resposta da questão " + (i + 1) + ":").toUpperCase();
+    }
+
+    let alunos = [];
+    let notas = [];
+    let aprovados = 0;
+
+    for (let i = 0; i < 10; i++) {
+        let numeroAluno = prompt("Digite o número do aluno " + (i + 1) + ":");
+        alunos[i] = numeroAluno;
+
+        let acertos = 0;
+
+        for (let j = 0; j < 8; j++) {
+            let resposta = prompt("Resposta da questão " + (j + 1) + " do aluno " + numeroAluno + ":").toUpperCase();
+            if (resposta === gabarito[j]) {
+            acertos++;
+            }
+        }
+
+        notas[i] = acertos;
+        if (acertos >= 6) {
+            aprovados++;
+        }
+    }
+
+    for (let i = 0; i < 10; i++) {
+        console.log("Aluno:", alunos[i], "- Nota:", notas[i]);
+    }
+
+    let porcentagemAprovacao = (aprovados / 10) * 100;
+    console.log("Porcentagem de aprovação:", porcentagemAprovacao + "%");
+
+
+</script>
