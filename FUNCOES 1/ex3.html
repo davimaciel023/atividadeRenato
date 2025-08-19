@@ -1,0 +1,33 @@
+<script>
+
+    function calcularDesconto(valor, taxa) {
+        return valor * taxa;
+    }
+
+    var preco = parseFloat(prompt("Preço da vacina (R$):"));
+    var possui = prompt("Possui convênio? (S/N)").toUpperCase();
+
+    var taxa;
+    if (possui === "S") {
+        var op = prompt(
+            "Selecione o convênio:\n1 - Amigo dos Animais (20%)\n2 - Saúde Animal (50%)"
+    );
+    if (op === "1") taxa = 0.20;
+    
+    else if (op === "2") taxa = 0.50;
+    
+    else taxa = 0;
+    } else {
+        taxa = 0.10;
+    }
+
+    var desconto = calcularDesconto(preco, taxa);
+    var total = preco - desconto;
+
+    alert(
+        "Desconto: R$ " + desconto.toFixed(2) +
+        "\nTotal a pagar: R$ " + total.toFixed(2)
+    );
+
+
+</script>
