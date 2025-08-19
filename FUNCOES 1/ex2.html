@@ -1,0 +1,37 @@
+<script>
+
+    function validarNome(nome) {
+        if (!nome) return false;
+        var partes = nome.trim().split(/\s+/);
+        return partes.length >= 2;
+    }
+
+    function obterSobrenome(nome) {
+        var partes = nome.trim().split(/\s+/);
+        return partes[partes.length - 1].toLowerCase();
+    }
+
+    function contarVogais(nome) {
+        var i, c, cont = 0;
+        var texto = nome.toLowerCase();
+        for (i = 0; i < texto.length; i++) {
+            c = texto[i];
+            if (c === 'a' || c === 'e' || c === 'i' || c === 'o' || c === 'u') {
+                cont++;
+            }
+        }
+        return (cont < 10 ? "0" + cont : String(cont));
+    }
+
+    var nomeCompleto = prompt("Informe o nome completo do aluno:");
+
+    if (!validarNome(nomeCompleto)) {
+        alert("Nome incompleto");
+    } else {
+        
+    var senha = obterSobrenome(nomeCompleto) + contarVogais(nomeCompleto);
+        alert("Senha inicial: " + senha);
+    }
+
+
+</script>
